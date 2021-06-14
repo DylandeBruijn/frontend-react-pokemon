@@ -13,11 +13,17 @@ export default function PokemonCard({ nameOfPokemon }) {
 			setPokemon(result.data);
 		}
 		fetchPokemon();
-	}, []);
+	}, [nameOfPokemon]);
 	return (
 		<>
 			<div>
 				<h1>{pokemon?.name}</h1>
+				<div>
+					{pokemon?.abilities.map((ability) => {
+						console.log(ability);
+						return <p>{ability.ability.name}</p>;
+					})}
+				</div>
 				<img src={pokemon?.sprites.front_default} alt="" />
 			</div>
 		</>
