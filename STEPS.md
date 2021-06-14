@@ -1,6 +1,6 @@
 # Steps
 
-- [] Component maken (kaartje)
+- [x] Component maken (kaartje)
 - [] State aanmaken voor Pokémon
 - [] Data ophalen voor 1 Pokémon
   - [] Axios installeren
