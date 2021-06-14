@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
+import PaginationButton from "./components/PaginationButton";
 
 function App() {
 	const [pokemonNames, setPokemonNames] = useState(null);
@@ -16,9 +17,13 @@ function App() {
 		fetchPokemonNames();
 	}, []);
 	return (
-		<div>
+		<main className="pokedex-wrapper">
+			<section className="next-previous-buttons">
+				<PaginationButton buttonText="Previous" />
+				<PaginationButton buttonText="Next" />
+			</section>
 			{pokemonNames ? (
-				<div>
+				<div className="pokedex-container">
 					{pokemonNames.map((pokemonName) => {
 						return <PokemonCard nameOfPokemon={pokemonName.name} />;
 					})}
@@ -26,7 +31,7 @@ function App() {
 			) : (
 				<h3>Loading...</h3>
 			)}
-		</div>
+		</main>
 	);
 }
 
