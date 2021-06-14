@@ -16,16 +16,19 @@ export default function PokemonCard({ nameOfPokemon }) {
 	}, [nameOfPokemon]);
 	return (
 		<>
-			<div>
-				<h1>{pokemon?.name}</h1>
-				<div>
+			<article className="pokemon-container">
+				<h1 className="pokemon-name">{pokemon?.name}</h1>
+				<div className="pokemon-abilities-container">
 					{pokemon?.abilities.map((ability) => {
-						console.log(ability);
-						return <p>{ability.ability.name}</p>;
+						return <p className="pokemon-ability">{ability.ability.name}</p>;
 					})}
 				</div>
-				<img src={pokemon?.sprites.front_default} alt="" />
-			</div>
+				<img
+					className="pokemon-sprite"
+					src={pokemon?.sprites.front_default}
+					alt={pokemon?.sprites.front_default}
+				/>
+			</article>
 		</>
 	);
 }
