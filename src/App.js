@@ -19,8 +19,9 @@ function App() {
 		<div>
 			{pokemonNames ? (
 				<div>
-					<PokemonCard nameOfPokemon="jigglypuff" />
-					<PokemonCard nameOfPokemon="diglett" />
+					{pokemonNames.map((pokemonName) => {
+						return <PokemonCard nameOfPokemon={pokemonName.name} />;
+					})}
 				</div>
 			) : (
 				<h3>Loading...</h3>
