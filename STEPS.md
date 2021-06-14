@@ -13,3 +13,5 @@
 - [x] Trigger rerender > setPokémon(response.data);
 - [x] Conditional render (pas component renderen als er data beschikbaar is)
 - [x] Data weergeven > JSX `<h1>{pokemon.abilities.length}</h1>`
+- [] Haal een lijst van 20 pokemon namen op
+- [] Map over deze lijst heen en genereer cards voor alle pokemon
