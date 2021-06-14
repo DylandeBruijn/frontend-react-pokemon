@@ -5,7 +5,8 @@ import PokemonCard from "./components/PokemonCard";
 function App() {
 	return (
 		<div>
-			<PokemonCard />
+			<PokemonCard nameOfPokemon="jigglypuff" />
+			<PokemonCard nameOfPokemon="diglett" />
 		</div>
 	);
 }
