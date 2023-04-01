@@ -1,1 +1,1 @@
-![Eindresultaat](src/assets/screenshot.gif)
+![](src/assets/screenshot.gif)
